@@ -1,17 +1,18 @@
 
 body{
-    margin:0; /* Allow sections to go up to the very edge of the page */
-    font-family: Calibri, sans-serif; /* Changes the font for the entire page to Calibri */
-    background-image: url("./images/noise.png"); /* Adds a grey background with noise */
+    margin:0; 
+    font-family: Calibri, sans-serif;
+    background-image: url("./images/noise.png");
 }
 
 .middle{
-    max-width:58em;
-    margin: auto;           /* Float in the middle of the page */
-    padding:1em 0 0 3%;     /* Leave some white space around content */
-    height:100%;            /* Go all the way from top to bottom of the page */
-    box-shadow:0px 0px 4px 1px #323232; /* Adds a box shadow to the main body */
-    background-color: #FAFAFA;          /* Changes the background colour to white */
+    min-height:45em;
+    max-width:55em;
+    margin: auto;   /* Float in the middle of the page */
+    padding:1em 3% 0 3%;     
+    height:100%;            
+    box-shadow:0px 0px 4px 1px #323232; 
+    background-color: #FAFAFA;  /* White */
 }
 
 .left{
@@ -22,11 +23,9 @@ body{
 .right{
     float:right;
     max-width:14em;
-    padding: 5%;
     padding-top:0;
 }
 
-/* When the users screen is less than 1200 pixels wide */
 @media screen and (max-width: 1200px) {
     .right{
         float:none; /* Put the navigation elements in line */
@@ -37,28 +36,18 @@ body{
     }
     .middle{
         padding-left: 0;
+        padding-right: 0;
     }
 }
 
 
-/* These properties are applied to both articles and footers */
 article, footer{
-
-    /* Leave vertical space between articles */
     margin-bottom: 1.5em;
-
-    /* Empty space INSIDE the element 
-    Values are ordered: Top, Right, Bottom, Left */
     padding: 0 2em 0.2em 2em; 
-
     background-color: #F5F5F5; /* light grey */
-
-    /* Fuzzy grey border */
     box-shadow: 0px 1.5px 2px grey;
-
 }
 
-/* Highlight with fuzzy black border when mouse is over element */
 article:hover, footer:hover{
     box-shadow: 0px 1px 2px black;
 }
@@ -95,12 +84,11 @@ article img{
     padding: 0.8em 0.5em 0.8em 0.5em;
 }
 
-/* List items within an element with the tag_list class */
 .tag_list li{
-    display: inline;    /* Display list horizontally */
-    list-style: none;   /* Don't put bullet points before each item */
-    margin-right: 1em;  /* Leave some space between each item */
-    color: #4a4a9f;     /* Make text blue */
+    display: inline;    
+    list-style: none;   
+    margin-right: 1em;  
+    color: #4a4a9f; /* Blue */
 }
 
 
@@ -113,7 +101,7 @@ nav h3{
 }
 
 nav ol li{
-    list-style: none;  /* Don't put bullet points before each item */
+    list-style: none;
 }
 
 /* Make logo fill the entire width of the right panel */
@@ -139,14 +127,31 @@ h1{
 footer{
     font-size: 1.2em;
     text-align: center;
-
-    /* Properties given different values later in the document override 
-    the previous value, so the footer will use these values even though
-    they were already set differently earlier */
     padding: 0.5em; 
     margin-bottom:1em;
 }
 
 footer p{
     margin: 0;
+}
+
+
+#search{
+    width:100%;
+    font-size: 1em; /* Text inside inputs is smaller by default in most browsers, this resets it to normal */
+}
+
+.hidden{
+    display:none;
+}
+
+/* Set the size of the banner */
+#banner{
+    width:100%;
+    height:10%;
+}
+/* Put the title in the middle of the banner */
+h1{
+    margin-top: -10%;
+    margin-bottom: 6%;
 }

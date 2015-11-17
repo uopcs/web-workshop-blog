@@ -17,55 +17,52 @@ The full project and workshop information can be found here:
 -->
 
 
-<!-- VERSION 1 - Pure HTML/CSS -->
+<!-- VERSION 2 - Now with JavaScript -->
 
+<!-- 
+Some documentation from the previous version has been removed to make changes 
+more visible. For help understanding the pre-existing code please refer to 
+version 1 which can be found here: 
+
+-->
 
 <html>
-
-    <!-- Meta information about the site goes in here -->
     <head>
-
-        <!-- Text to display in the browser tab and default name for bookmarks -->
         <title>My Blog</title>
 
-        <!-- Tell the browser the encoding so it doesn't have to guess -->
         <meta charset="UTF-8">
 
-        <!-- Include some style-sheets; Try to avoid in-line styling -->
         <link rel="stylesheet" href="Blog.css">
+
+        <!-- Load the JavaScript file -->
+        <script src='Blog.js'></script>
 
     </head>
 
-
-    <!-- What gets shown on the page goes in here -->
     <body>
 
-        <!-- Contains all content to be displayed in the middle of the page -->
         <section class="middle">
 
-            
-            <!-- The title, this is where 'Go To Top' will link to -->
-            <h1 id="Top">My Blog</h1>
-            
+            <!-- This is the banner image that will be drawn using JavaScript -->
+            <svg id='banner'></svg>
 
-            <!-- 
-            The right column of the middle section 
-            (containing information about the author) 
-            -->
+            <!-- This is where 'Go To Top' will link to -->
+            <h1 id="Top">My Blog</h1>
+
             <section class="right">
 
-                <!-- The ID society's logo -->
                 <img src="./images/ITSoc-logo-square.svg" alt="IT society logo">
 
-
-                <!-- The blog description under the picture -->
                 <p>
                     This is my blog! It contains stuff! 
                     Here I will post about things and you can read them.
                 </p>
 
-                <!-- The contents links -->
                 <nav>
+
+                    <!-- Using JavaScript this will allow searching for tags -->
+                    <input id='search' placeholder='Search by tag'>
+
                     <h3>Articles</h3>
                     <ol>
                         <li><a href="#post1">First Post</a></li>
@@ -74,6 +71,7 @@ The full project and workshop information can be found here:
                         <li><a href="#post4">Fourth Post</a></li>
                         <li><a href="#post5">Fifth Post</a></li>
                     </ol>
+
                 </nav>
 
             </section>
@@ -87,19 +85,15 @@ The full project and workshop information can be found here:
 
                 <!-- This is an example of a post, any content can be put in here -->
                 <article id="post1">
-
-                    <!-- The title of the post -->
                     <h2>
                         First Post                              <!-- Article name -->
                         <a href="#Top" title="Go to top">^</a>  <!-- Link to top -->
                         <span class="date">15/11/15</span>      <!-- Article date -->
                     </h2>
 
-                    <!-- An image to accompany the post -->
                     <img src="./images/colosseum.jpg" alt="Photo of the colosseum in Rome">
-                    
-                    <!-- The text content of the post -->
-                    <p>	<!-- First paragraph -->
+
+                    <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nam tincidunt vestibulum scelerisque. Pellentesque pretium 
                         tortor libero, in sodales nulla fermentum ornare. Cras eget 
@@ -108,7 +102,7 @@ The full project and workshop information can be found here:
                         pulvinar id. Cras sit amet lectus libero. Fusce lectus 
                         enim, tempus.
                     </p>
-                    <p>	<!-- Second paragraph -->
+                    <p>
                         Aenean eu euismod mi, dignissim egestas est. Proin et posuere 
                         enim. Vestibulum sed blandit purus. Pellentesque ultrices est 
                         a nunc dictum pretium. Suspendisse cursus sapien non ligula 
@@ -222,11 +216,8 @@ The full project and workshop information can be found here:
 
                 <!-- END OF FILLER DATA -->
 
-
-                <!-- Stuff to display at the bottom of the page -->
                 <footer>
 
-                    <!-- Link to top -->
                     <a href="#Top">Go to top</a> 
 
                     <!-- Link W3C HTML validator -->
