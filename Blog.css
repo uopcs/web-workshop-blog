@@ -1,0 +1,152 @@
+
+body{
+    margin:0; /* Allow sections to go up to the very edge of the page */
+    font-family: Calibri, sans-serif; /* Changes the font for the entire page to Calibri */
+    background-image: url("./images/noise.png"); /* Adds a grey background with noise */
+}
+
+.middle{
+    max-width:58em;
+    margin: auto;           /* Float in the middle of the page */
+    padding:1em 0 0 3%;     /* Leave some white space around content */
+    height:100%;            /* Go all the way from top to bottom of the page */
+    box-shadow:0px 0px 4px 1px #323232; /* Adds a box shadow to the main body */
+    background-color: #FAFAFA;          /* Changes the background colour to white */
+}
+
+.left{
+    max-width: 38em;
+}
+
+/* Put the navigation elements on the right */
+.right{
+    float:right;
+    max-width:14em;
+    padding: 5%;
+    padding-top:0;
+}
+
+/* When the users screen is less than 1200 pixels wide */
+@media screen and (max-width: 1200px) {
+    .right{
+        float:none; /* Put the navigation elements in line */
+        margin:auto; /* Center on page */
+    }
+    .left{
+        margin:auto; /* Center on page */
+    }
+    .middle{
+        padding-left: 0;
+    }
+}
+
+
+/* These properties are applied to both articles and footers */
+article, footer{
+
+    /* Leave vertical space between articles */
+    margin-bottom: 1.5em;
+
+    /* Empty space INSIDE the element 
+    Values are ordered: Top, Right, Bottom, Left */
+    padding: 0 2em 0.2em 2em; 
+
+    background-color: #F5F5F5; /* light grey */
+
+    /* Fuzzy grey border */
+    box-shadow: 0px 1.5px 2px grey;
+
+}
+
+/* Highlight with fuzzy black border when mouse is over element */
+article:hover, footer:hover{
+    box-shadow: 0px 1px 2px black;
+}
+
+article h2{
+    padding: 0.3em 0 0.3em 0;
+    margin:0;
+    border-bottom: 1px solid grey;
+}
+
+/* Put the date on the right of the article's title */
+article span.date{
+    float:right;
+}
+
+/* Remove underline from 'Go To Top' links */
+article h2 a{
+    text-decoration: none;
+}
+
+article p{
+    padding:0.2em;
+    margin:0.2em 0 0.5em 0;
+}
+
+article img{
+    width:100%;
+}
+
+
+
+.tag_list{
+    margin: 0;
+    padding: 0.8em 0.5em 0.8em 0.5em;
+}
+
+/* List items within an element with the tag_list class */
+.tag_list li{
+    display: inline;    /* Display list horizontally */
+    list-style: none;   /* Don't put bullet points before each item */
+    margin-right: 1em;  /* Leave some space between each item */
+    color: #4a4a9f;     /* Make text blue */
+}
+
+
+nav ol{
+    margin-top:0;
+}
+
+nav h3{
+    margin-bottom: 0;
+}
+
+nav ol li{
+    list-style: none;  /* Don't put bullet points before each item */
+}
+
+/* Make logo fill the entire width of the right panel */
+.right img{
+    width:100%;
+}
+
+.right p{
+    padding:0.5em;
+    margin-top:1.5em;
+    border-top:ridge;
+    border-bottom:ridge;
+}
+
+h1{
+    font-size: 3em;
+    text-align:center;
+    font-family: Gill Sans, sans-serif;
+    font-weight: normal;
+}
+
+
+footer{
+    font-size: 1.2em;
+    text-align: center;
+
+    /* Properties given different values later in the document override 
+    the previous value, so the footer will use these values even though
+    they were already set differently earlier */
+    padding: 0.5em; 
+    margin-bottom:1em;
+}
+
+footer p{
+    margin: 0;
+}
