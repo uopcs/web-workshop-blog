@@ -1,0 +1,245 @@
+<!doctype html> 
+<!-- 
+Always specify the doctype; this should just be 'html' for HTML5 
+Internet explorer can behave oddly if this isn't the first line in the document 
+-->
+
+
+<!-- 
+This document is a example of a simple blog-like website.
+It is intended solely for educational purposes.
+
+This project was created for the University of Portsmouth IT Society in 2015 
+by David Ralph, present Technical Secretary: David.M.L.Ralph@gmail.com
+
+The full project and workshop information can be found here:
+
+-->
+
+
+<!-- VERSION 1 - Pure HTML/CSS -->
+
+
+<html>
+
+    <!-- Meta information about the site goes in here -->
+    <head>
+
+        <!-- Text to display in the browser tab and default name for bookmarks -->
+        <title>My Blog</title>
+
+        <!-- Tell the browser the encoding so it doesn't have to guess -->
+        <meta charset="UTF-8">
+
+        <!-- Include some style-sheets; Try to avoid in-line styling -->
+        <link rel="stylesheet" href="Blog.css">
+
+    </head>
+
+
+    <!-- What gets shown on the page goes in here -->
+    <body>
+
+        <!-- Contains all content to be displayed in the middle of the page -->
+        <section class="middle">
+
+            
+            <!-- The title, this is where 'Go To Top' will link to -->
+            <h1 id="Top">My Blog</h1>
+            
+
+            <!-- 
+            The right column of the middle section 
+            (containing information about the author) 
+            -->
+            <section class="right">
+
+                <!-- The ID society's logo -->
+                <img src="./images/ITSoc-logo-square.svg" alt="IT society logo">
+
+
+                <!-- The blog description under the picture -->
+                <p>
+                    This is my blog! It contains stuff! 
+                    Here I will post about things and you can read them.
+                </p>
+
+                <!-- The contents links -->
+                <nav>
+                    <h3>Articles</h3>
+                    <ol>
+                        <li><a href="#post1">First Post</a></li>
+                        <li><a href="#post2">Second Post</a></li>
+                        <li><a href="#post3">Third Post</a></li>
+                        <li><a href="#post4">Fourth Post</a></li>
+                        <li><a href="#post5">Fifth Post</a></li>
+                    </ol>
+                </nav>
+
+            </section>
+
+
+            <!-- 
+            The left column of the middle section 
+            (containing all the blog posts) 
+            -->
+            <section class="left">
+
+                <!-- This is an example of a post, any content can be put in here -->
+                <article id="post1">
+
+                    <!-- The title of the post -->
+                    <h2>
+                        First Post                              <!-- Article name -->
+                        <a href="#Top" title="Go to top">^</a>  <!-- Link to top -->
+                        <span class="date">15/11/15</span>      <!-- Article date -->
+                    </h2>
+
+                    <!-- An image to accompany the post -->
+                    <img src="./images/colosseum.jpg" alt="Photo of the colosseum in Rome">
+                    
+                    <!-- The text content of the post -->
+                    <p>	<!-- First paragraph -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Nam tincidunt vestibulum scelerisque. Pellentesque pretium 
+                        tortor libero, in sodales nulla fermentum ornare. Cras eget 
+                        mattis mauris. Donec rhoncus turpis vel mauris lobortis 
+                        ornare. Proin maximus nulla mauris, vitae volutpat massa 
+                        pulvinar id. Cras sit amet lectus libero. Fusce lectus 
+                        enim, tempus.
+                    </p>
+                    <p>	<!-- Second paragraph -->
+                        Aenean eu euismod mi, dignissim egestas est. Proin et posuere 
+                        enim. Vestibulum sed blandit purus. Pellentesque ultrices est 
+                        a nunc dictum pretium. Suspendisse cursus sapien non ligula 
+                        scelerisque dapibus. Donec ut euismod mi. Duis vestibulum 
+                        auctor eros.
+                    </p>
+
+                    <!-- A list of tags belonging to this post -->
+                    <ul class='tag_list'>
+                        <li>tag1</li>
+                        <li>tag2</li>
+                        <li>tag3</li>
+                    </ul>
+
+                </article>
+
+
+                <!-- Below is lots of filler data, any of this can be safely ignored, 
+                deleted or commented out, but make sure to still include the footer
+                and closing tags at the bottom! -->
+
+                <article id="post2">
+                    <h2>
+                        Second Post
+                        <a href="#Top" title="Go to top">^</a>
+                        <span class="date">10/11/15</span>
+                    </h2>
+                    <p>	
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer orci felis, egestas ut nisi vel, dapibus eleifend 
+                        magna. Morbi semper.
+                    </p>
+                    <ul class='tag_list'>
+                        <li>tag2</li>
+                        <li>tag3</li>
+                    </ul>
+                </article>
+
+                <article id="post3">
+                    <h2>
+                        Third Post
+                        <a href="#Top" title="Go to top">^</a>
+                        <span class="date">03/11/15</span>
+                    </h2>
+                    <img src="images/aquaduct.jpg" alt="Photo of a Roman aquaduct">
+                    <p>	
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed ut quam non arcu lacinia dapibus. Duis in consectetur nulla. 
+                        Sed auctor laoreet erat, quis euismod lorem consequat non. 
+                        Donec id maximus elit. Interdum et malesuada fames ac ante 
+                        ipsum primis in faucibus. Pellentesque metus elit, mattis in 
+                        sodales pulvinar, ultrices ut elit. Nunc congue vulputate 
+                        suscipit. Proin vitae massa sed erat sodales fermentum vitae 
+                        sit amet turpis. Maecenas eu augue ac metus imperdiet convallis 
+                        sed et justo. Nullam eget rhoncus.
+                    </p>
+                    <ul class='tag_list'>
+                        <li>tag1</li>
+                        <li>tag3</li>
+                    </ul>
+                </article>
+
+                <article id="post4">
+                    <h2>
+                        Fourth Post
+                        <a href="#Top" title="Go to top">^</a>
+                        <span class="date">20/10/15</span>
+                    </h2>
+                    <p>	
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Aliquam ullamcorper vitae metus non tincidunt. Vestibulum 
+                        lacinia quam quis metus tristique commodo. Suspendisse 
+                        imperdiet vestibulum elit, id posuere arcu sollicitudin ut. 
+                        Integer et quam ut mi vestibulum tincidunt ullamcorper et 
+                        nisl. Donec imperdiet nibh eget nulla pellentesque 
+                        fringilla. Vivamus non nibh ac sapien euismod faucibus sed 
+                        a eros. Etiam a imperdiet odio. Integer tristique nulla vel 
+                        dolor semper, non viverra justo aliquet. Maecenas eget 
+                        sollicitudin sapien.
+                    </p>
+                    <p>
+                        Donec vitae purus massa. Suspendisse sed viverra ligula, 
+                        eget elementum velit. Integer pulvinar lorem ultricies eros 
+                        iaculis, at placerat nisi pretium. Maecenas faucibus lectus 
+                        eu massa luctus, sed feugiat eros lobortis. Proin sed mattis 
+                        enim. Nulla facilisi. Ut elementum sagittis arcu, vel 
+                        laoreet mauris accumsan nec. Suspendisse rutrum porta 
+                        mattis. Aenean a erat dolor. Maecenas.
+                    </p>
+                    <ul class='tag_list'>
+                        <li>tag3</li>
+                    </ul>
+                </article>
+
+                <article id="post5">
+                    <h2>
+                        Fifth Post
+                        <a href="#Top" title="Go to top">^</a>
+                        <span class="date">01/09/15</span>
+                    </h2>
+                    <p>	
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed ultricies bibendum lorem venenatis dapibus. Suspendisse
+                        quis ultricies leo, vitae mollis diam. Phasellus felis sem, 
+                        sagittis at enim sed, accumsan rutrum.
+                    </p>
+                    <ul class='tag_list'>
+                        <li>tag2</li>
+                    </ul>
+                </article>
+
+                <!-- END OF FILLER DATA -->
+
+
+                <!-- Stuff to display at the bottom of the page -->
+                <footer>
+
+                    <!-- Link to top -->
+                    <a href="#Top">Go to top</a> 
+
+                    <!-- Link W3C HTML validator -->
+                    <p>
+                        This page is written in semantic HTML and validates in the 
+                        <a href="http://validator.w3.org/check?uri=referer">W3C validator</a>.
+                    </p>
+
+                </footer>
+
+            </section>
+
+        </section>
+
+    </body>
+</html>
