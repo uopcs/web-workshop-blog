@@ -52,8 +52,8 @@ function drawRandomCircle(canvas) {
 
     // Randomly generate some shape properties
     var radius = randomInt(10, 40);
-    var xPos = randomInt(radius, canvas.offsetWidth - radius);
-    var yPos = randomInt(radius, canvas.offsetHeight - radius);
+    var xPos = randomInt(radius, canvas.scrollWidth - radius);
+    var yPos = randomInt(radius, canvas.scrollHeight - radius);
     var colour = colours[randomInt(0, colours.length - 1)];
 
     // Create the shape and set its properties
@@ -89,10 +89,10 @@ function drawRandomLine(canvas) {
 
     // Create the shape and set its properties
     var line = document.createElementNS(namespace, 'line');
-    line.setAttribute('x1', randomInt(0, canvas.offsetWidth));
-    line.setAttribute('x2', randomInt(0, canvas.offsetWidth));
+    line.setAttribute('x1', randomInt(0, canvas.scrollWidth));
+    line.setAttribute('x2', randomInt(0, canvas.scrollWidth));
     line.setAttribute('y1', 0);
-    line.setAttribute('y2', canvas.offsetHeight);
+    line.setAttribute('y2', canvas.scrollHeight);
     line.setAttribute('stroke', colour);
     line.setAttribute('stroke-width', '3');
     line.setAttribute('stroke-opacity', '0.3');
