@@ -131,8 +131,8 @@ function addSearchBarFunctionality() {
      * Note:
      * As well as the .addEventListner method, it is also possible to set the
      * event directly using .on[event_name] 
-     * The main diffrence is that this removes any other functions currently 
-     * attatched to the same event on the element.
+     * The main difference is that this removes any other functions currently 
+     * attached to the same event on the element.
      */
 
     // Whenever the value changes, perform a search for the current value.
@@ -152,7 +152,7 @@ function addSearchBarFunctionality() {
  */
 function searchByTag(tagName) {
 
-    // Assume there are no matches untill proven otherwise
+    // Assume there are no matches until proven otherwise
     var noMatches = true;
 
     // Get a list of all our articles
@@ -223,7 +223,7 @@ function searchByTag(tagName) {
 
 
 /**
- * Determins whether a tag is contained in a tagList.
+ * Determines whether a tag is contained in a tagList.
  * 
  * @param {String} tagName
  * @param {array(String)} tagList
@@ -237,7 +237,7 @@ function tagInTagList(tagName, tagList) {
     // Look through all the tags
     for (var i = 0; i < tags.length; i++) {
 
-        // See the tag contains the search value
+        // See if the tag contains the search value
         if (stringContains(tags[i].innerHTML, tagName)) {
 
             // Exit as soon as we find a match 
@@ -251,8 +251,8 @@ function tagInTagList(tagName, tagList) {
 
 
 /**
- * Determins whether the searchString is a sub-string if the sourceString.
- * This is equivelent to the String.contains() method in most other languages.
+ * Determines whether the searchString is a sub-string of the sourceString.
+ * This is equivalent to the String.contains() function in most other languages.
  * 
  * @param {String} sourceString
  * @param {String} searchString
